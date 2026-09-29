@@ -1,0 +1,48 @@
+@use "../abstracts" as a;
+
+.footer {
+  background-color: a.$d-gray;
+  padding-bottom: 60px;
+
+  @include a.breakpoint(tablet) {
+    padding-bottom: 40px;
+  }
+
+  @include a.breakpoint(desktop) {
+    padding-bottom: 92px;
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid a.$white;
+    padding-top: 40px;
+    align-items: center;
+    gap: 20px;
+
+    @include a.breakpoint(tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 30px;
+    }
+
+    @include a.breakpoint(desktop) {
+      padding-top: 48px;
+    }
+  }
+
+  &_logo {
+    width: 130px;
+    display: block;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @include a.breakpoint(tablet) {
+      width: 172px;
+    }
+  }
+}

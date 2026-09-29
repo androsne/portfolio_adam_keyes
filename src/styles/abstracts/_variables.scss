@@ -1,0 +1,21 @@
+//Design tokens such as colors, font families, spacing scales, breakpoints, and z-index layers.
+
+//Colors
+$black: #151515;
+$green: #4ee1a0;
+$d-gray: #242424;
+$l-gray: #d9d9d9;
+$white: #ffffff;
+$orange: #ff6f5b;
+
+//Typography
+$font-primary: "Space Grotesk", sans-serif;
+
+//Breakpoints
+$bp-tablet: 768px;
+$bp-desktop: 1200px;
+
+//Rings
+$ring: url("/src/assets/icons/ring.svg");
+$oval_right: url("/src/assets/icons/oval_right.svg");
+$oval_left: url("/src/assets/icons/oval_left.svg");

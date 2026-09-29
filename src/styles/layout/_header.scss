@@ -1,0 +1,45 @@
+@use "../abstracts" as a;
+
+.header {
+  padding-top: 20px;
+  padding-bottom: 32px;
+  position: relative;
+  z-index: 10;
+
+  @include a.breakpoint(tablet) {
+    padding-top: 32px;
+    padding-bottom: 24px;
+  }
+
+  @include a.breakpoint(desktop) {
+    padding-top: 40px;
+    padding-bottom: 62px;
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @include a.breakpoint(tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &_logo {
+    width: 130px;
+    display: block;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @include a.breakpoint(tablet) {
+      width: 172px;
+    }
+  }
+}

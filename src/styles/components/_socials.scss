@@ -1,0 +1,37 @@
+@use "../abstracts" as a;
+
+.socials {
+  @include a.breakpoint(desktop) {
+    margin-right: 30px;
+  }
+  &_list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @include a.breakpoint(tablet) {
+      gap: 32px;
+    }
+  }
+
+  a {
+    color: a.$white;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: a.$green;
+    }
+
+    svg {
+      fill: currentColor;
+      transition:
+        width 0.3s ease,
+        height 0.3s ease;
+
+      @include a.breakpoint(tablet) {
+        width: 25px;
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@use "../abstracts" as a;
+
+.form {
+  &_group {
+    display: flex;
+    flex-direction: column;
+
+    input,
+    textarea {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid a.$white;
+      color: a.$white;
+      padding: 0 24px 16px 24px;
+      font-family: inherit;
+      @include a.body-s;
+      text-transform: uppercase;
+      letter-spacing: -0.222px;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-bottom-color: a.$green;
+      }
+
+      &:not(:placeholder-shown):invalid {
+        border-bottom-color: a.$orange;
+
+        & ~ .error_text {
+          display: block;
+        }
+      }
+
+      &::placeholder {
+        color: rgba(a.$l-gray, 0.5);
+      }
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .error_text {
+      display: none;
+      color: a.$orange;
+      font-size: 12px;
+      text-align: right;
+      margin-top: 8px;
+    }
+  }
+
+  &_submit {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

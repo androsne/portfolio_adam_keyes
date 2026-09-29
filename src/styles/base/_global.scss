@@ -1,0 +1,35 @@
+//Root variables, selection styles, HTML/body base styles (non-typography related), and smooth scrolling.
+
+@use "../abstracts" as a;
+
+html {
+  scroll-behavior: smooth;
+  background-color: a.$black;
+}
+
+body {
+  background-color: a.$black;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.header_container,
+.hero_container,
+.skills_container,
+.projects_container,
+.contact_container,
+.footer_container {
+  width: calc(100% - 32px);
+  max-width: 1110px;
+  margin: 0 auto;
+
+  @include a.breakpoint(tablet) {
+    width: calc(100% - 64px);
+  }
+
+  @include a.breakpoint(desktop) {
+    width: calc(100% - 90px);
+  }
+}

@@ -1,0 +1,27 @@
+@use "../abstracts" as a;
+
+.btn {
+  display: inline-flex;
+  font-family: inherit;
+  color: a.$white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 2.29px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 2px solid a.$green;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
+  &:hover,
+  &:focus {
+    color: a.$green;
+    outline: none;
+  }
+}

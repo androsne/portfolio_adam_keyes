@@ -1,0 +1,69 @@
+@use "../abstracts" as a;
+
+.skills {
+  padding-top: 40px;
+  padding-bottom: 64px;
+  background-image: a.$oval_left;
+  background-repeat: no-repeat;
+  background-position: right -110px bottom 0;
+
+  @include a.breakpoint(tablet) {
+    background-position: right -110px bottom 40px;
+  }
+
+  @include a.breakpoint(desktop) {
+    background-position: right -20px bottom 88px;
+    padding-top: 72px;
+    padding-bottom: 100px;
+  }
+
+  &_container {
+    border-bottom: 1px solid a.$white;
+    padding-bottom: 40px;
+
+    @include a.breakpoint(tablet) {
+      border-bottom: none;
+    }
+  }
+
+  &_list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+
+    @include a.breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      text-align: left;
+      gap: 52px 24px;
+    }
+
+    @include a.breakpoint(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 58px 30px;
+    }
+  }
+
+  &_item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &_title {
+    @include a.heading-ms;
+
+    @include a.breakpoint(tablet) {
+      @include a.heading-l;
+    }
+  }
+
+  &_experience {
+    @include a.body-s;
+    color: a.$l-gray;
+
+    @include a.breakpoint(tablet) {
+      @include a.body-m;
+    }
+  }
+}
